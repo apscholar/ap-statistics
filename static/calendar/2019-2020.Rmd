@@ -1,0 +1,72 @@
+---
+title: "AP^&reg;^ Statistics Calendar (Mr. Li's Class)"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+      - {title: "AP<sup>&reg;</sup> Statistics Main Website (Mr. Li)", href: "https://ap-statistics.github.io" }
+      - {title: "Schedule", href: "https://ap-statistics.github.io/schedule" }
+      
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+<!-- Calculus AB -->
+<!-- =====================================  -->
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### <b>2019--2020 Statistics Calendar</b>
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(openair)
+
+ab <- tibble(date= as.Date(c("2019-09-02")), val = c(4),
+              item = c("Placeholder"))
+
+ab <- ab %>% 
+  add_row(date = "2019-10-01", val = 4, item = "") %>%
+  add_row(date = "2019-11-01", val = 4, item = "") %>%
+  add_row(date = "2019-12-01", val = 4, item = "") %>%
+  add_row(date = "2020-01-01", val = 4, item = "") %>%
+  add_row(date = "2020-02-01", val = 4, item = "") %>%
+  add_row(date = "2020-03-01", val = 4, item = "") %>%
+  add_row(date = "2020-04-01", val = 4, item = "") %>%
+  add_row(date = "2020-05-15", val = 3, item = "<a href = 'https://apcentral.collegeboard.org/courses/exam-dates-and-fees/exam-dates-2020'>AP Statistics Exam</a> (12 p.m.)")
+
+ab <- ab %>% add_column(month = as.factor(month(ab$date)), year = as.factor(year(ab$date)))
+
+calendarPlot(ab, pollutant = "val", year =c(2019,2020), annotate = "date", breaks = c(0,1,2,3), labels = c("Unit Progress","Practice Exams","Exams"), w.shift = 1,
+             cols = c("lightblue","gold","lightcoral"))
+```
+
+> \*AP is a registered trademark of the College Board, which was not involved in the production of this webpage. The dates in this calendar apply only to Mr. Li's statistics class.
+
+
+Column {data-width=450, .tabset}
+-----------------------------------------------------------------------
+### <b>AP Statistics Dates</b>
+
+```{r}
+library(DT)
+ab2 <- rename(ab, Date = date, Year = year, Month = month, Item = item, Type = val)
+ab2 <- ab2[,c("Date","Item","Type","Month","Year")]
+ab2 <- ab2 %>% filter(Type<4)
+ab2$Type <- as.factor(ab2$Type)
+# sch2 <- sch[,c("Date","Year","Month","Item")]
+datatable(ab2, filter = 'top', escape = FALSE, options = list(
+  pageLength = 15, autoWidth = TRUE, scrollX = TRUE, 
+  columnDefs = list(list(width='250px', targets=2),
+                    list(width='5px', targets=c(3,4,5))) )) %>%
+  formatStyle("Type", 
+              backgroundColor = styleEqual(c(1,2,3), c("lightblue","gold","lightcoral")))
+```
+
+> Filter by Type (1 = Unit Progress, 2 = Practice Exams, 3 = Exams)
+

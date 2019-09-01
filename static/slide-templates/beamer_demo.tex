@@ -1,0 +1,255 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{Boadilla}
+\usecolortheme{dolphin}
+\usefonttheme{professionalfonts}
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Slide Template with Guidelines and Examples},
+  pdfauthor={Mr.~Li; AP Research; Period 1},
+  pdfborder={0 0 0},
+  breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-2}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+%need for R stargazer output
+\usepackage{dcolumn}
+
+\usepackage{caption} 
+\captionsetup[table]{position=top, skip=-0.05in}
+
+\title{Slide Template with Guidelines and Examples}
+\author{Mr.~Li \and AP Research \and Period 1}
+\date{2019-06-11}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Introduction}
+\protect\hypertarget{introduction}{}
+
+Introduce research topic and question.
+
+What is the relevance of the question?
+
+\end{frame}
+
+\begin{frame}{Literature Review}
+\protect\hypertarget{literature-review}{}
+
+Theory A (Aqda, Hamidi, \& Rahimi,
+\protect\hyperlink{ref-Aqda11}{2011}).
+
+Aqda et al. (\protect\hyperlink{ref-Aqda11}{2011}) also posited
+Hypothesis D with preliminary Results B.
+
+Theory B with Results X, Y, and Z (Angrist \& Lavy,
+\protect\hyperlink{ref-Angrist02}{2002}).
+
+\end{frame}
+
+\begin{frame}{Hypothesis}
+\protect\hypertarget{hypothesis}{}
+
+Formulate hypothesis or set of hypotheses based on preliminary research.
+
+How does the hypothesis connect with existing research? Integrate with
+literature review.
+
+\end{frame}
+
+\begin{frame}{Research Design}
+\protect\hypertarget{research-design}{}
+
+How will you test your hypothesis?
+
+What research design will you employ? Based on your chosen research
+design, what relevant research methods will you apply?
+
+\end{frame}
+
+\begin{frame}{Methods}
+\protect\hypertarget{methods}{}
+
+Explain your choice of methods based on research design.
+
+How will your methods test your hypothesis?
+
+\end{frame}
+
+\begin{frame}{Results}
+\protect\hypertarget{results}{}
+
+\begin{table}[!htbp] \centering 
+  \caption{Wage Regression Models} 
+  \label{} 
+\small 
+\begin{tabular}{@{\extracolsep{-10pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{wage} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ tenure & 0.177^{***} & 0.198^{***} & 0.178^{***} \\ 
+  & (0.021) & (0.024) & (0.021) \\ 
+  exper &  & -0.022^{*} &  \\ 
+  &  & (0.013) &  \\ 
+  nonwhite &  &  & -0.517 \\ 
+  &  &  & (0.498) \\ 
+  Constant & 4.991^{***} & 5.258^{***} & 5.043^{***} \\ 
+  & (0.185) & (0.243) & (0.192) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{526} & \multicolumn{1}{c}{526} & \multicolumn{1}{c}{526} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.120} & \multicolumn{1}{c}{0.125} & \multicolumn{1}{c}{0.122} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.119} & \multicolumn{1}{c}{0.122} & \multicolumn{1}{c}{0.119} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\end{frame}
+
+\begin{frame}[fragile]{Analysis}
+\protect\hypertarget{analysis}{}
+
+Model 1: \(\widehat{\text{wage}} = 4.99 + 0.18~\text{tenure}\)
+
+Model 2:
+\(\widehat{\text{wage}} = 5.26 + 0.2~\text{tenure} -0.02 ~\text{exper}\)
+
+Model 3:
+\(\widehat{\text{wage}} = 5.04 + 0.18~\text{tenure} -0.52 ~\text{nonwhite}\)
+
+Despite the coefficient of \texttt{exper} being statistically
+significant (\(p =\) 0.089) at the 10\% level, the negative sign implies
+that each year of experience is associated with a decrease in 2 cents in
+average hourly earnings, holding all else constant. This
+counterintuitive result is most likely due to multicollinearity, as the
+correlation between \texttt{tenure} and \texttt{exper} is rather high
+(\(r =\) 0.499).
+
+\end{frame}
+
+\begin{frame}{Evaluation}
+\protect\hypertarget{evaluation}{}
+
+How does your collected evidence address your hypothesis?
+
+In light of the evidence, how might you qualify the statements contained
+in your hypothesis?
+
+What are the implications of your study?
+
+\end{frame}
+
+\begin{frame}{Conclusion}
+\protect\hypertarget{conclusion}{}
+
+Potential directions for future studies
+
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Angrist02}{}%
+Angrist, J., \& Lavy, V. (2002). New Evidence on Classroom Computers and
+Pupil Learning. \emph{The Economic Journal}, \emph{112}(482), 735--765.
+\url{https://doi.org/10.1111/1468-0297.00068}
+
+\leavevmode\hypertarget{ref-Aqda11}{}%
+Aqda, M. F., Hamidi, F., \& Rahimi, M. (2011). The comparative effect of
+computer-aided instruction and traditional teaching on student's
+creativity in math classes. \emph{Procedia Computer Science}, \emph{3},
+266--270. \url{https://doi.org/10.1016/j.procs.2010.12.045}
+
+\end{frame}
+
+\printbibliography
+
+\end{document}

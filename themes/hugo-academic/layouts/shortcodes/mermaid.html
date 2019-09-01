@@ -1,0 +1,15 @@
+<link href="{{"mermaid/mermaid.css" | relURL}}" type="text/css" rel="stylesheet"/>
+<script defer src="{{"mermaid/mermaid.js" | relURL}}">mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}" style="font-size: 180%">{{ safeHTML .Inner }}</div>
+<style>
+.mermaid {
+    font-size: 20px;
+}
+.mermaidTooltip {
+    font-size: 20px;
+}
+.taskText{
+    font-size: 20px;
+}
+</style>
+
