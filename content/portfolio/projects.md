@@ -32,6 +32,10 @@ subtitle = ""
   [[content.filter_button]]
     name = "Cloud"
     tag = "Cloud"
+    
+  [[content.filter_button]]
+    name = "Textbooks"
+    tag = "Textbooks"
 
   [[content.filter_button]]
     name = "Homework"
@@ -42,12 +46,12 @@ subtitle = ""
     tag = "Free Response"
   
   [[content.filter_button]]
-    name = "Extra Practice"
-    tag = "Extra Practice"
+    name = "OpenIntro"
+    tag = "OpenIntro"
 
   [[content.filter_button]]
-    name = "Demos"
-    tag = "Demos"
+    name = "Labs"
+    tag = "Labs"
     
   [[content.filter_button]]
     name = "Forms"

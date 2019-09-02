@@ -14,7 +14,7 @@ links:
 # slides: example
 summary: Recommended resource for extra practice (not required for this course). Make sure the book comes with a CD-ROM (附光盤) if you want additional practice tests.
 tags:
-- Extra Practice
+- Textbooks
 title: Barron's AP Statistics (9th Edition)
 url_code: ""
 url_pdf: ""
