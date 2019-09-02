@@ -23,8 +23,9 @@ Stop by anytime during my regular office hours (no appointment necessary). If yo
 <!-- Calendly link widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dariusli/mtg?hide_event_type_details=1'});return false;">Schedule a meeting with Mr. Li.</a>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dariusli/mtg?hide_event_type_details=1'});return false;">Schedule a meeting with Mr. Li</a>
 <!-- Calendly link widget end -->
+[(direct link)](https://calendly.com/dariusli)
 
 If none of the time slots work for your schedule, please check with me before or after class to arrange for another time to meet. For all other non-scheduling issues and matters that cannot be addressed during office hours, please use the e-mail form below to contact me. Thank you for following these procedures.
 
