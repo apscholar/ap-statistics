@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 125  # Order that this section will appear.
 
 title = "Office Hours"
-subtitle = "Office Hours TBD"
+subtitle = "<b>Evening Tutoring:</b> <br> Thursdays, 20:10 -- 21:00 (M307) <br> <b> Additional Office Hours: </b> <br> By Appointment (M501A)"
 
 # Automatically link email and phone?
 autolink = true
@@ -18,7 +18,7 @@ autolink = true
 email_form = 0
 +++
 
-Stop by anytime during my regular office hours (no appointment necessary). If you would like to meet with me outside of office hours, please use the link below to schedule an appointment. Time slots are by default 30 minutes long, but you can specify the meeting length in the appointment link if you would like to request a longer meeting.
+Stop by anytime during my evening tutoring sessions. If you would like to meet with me outside of evening tutoring hours, please use the link below to schedule an appointment. Time slots are by default 30 minutes long, but you can specify the meeting length in the appointment link if you would like to request a longer meeting.
 
 <!-- Calendly link widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
