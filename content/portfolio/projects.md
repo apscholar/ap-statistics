@@ -54,8 +54,8 @@ subtitle = ""
     tag = "Labs"
     
   [[content.filter_button]]
-    name = "Forms"
-    tag = "Forms"
+    name = "Submissions"
+    tag = "Submissions"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
